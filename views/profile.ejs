@@ -33,7 +33,16 @@
         <li>時間為：<%= user.date %></li>
       </ul>
     </section>
-
-    
+    <section class="posts">
+      <% for (let i = 0; i < posts.length; i++) { %>
+      <div class="card" style="width: 18rem; margin: 1rem">
+        <div class="card-body">
+          <h5 class="card-title"><%= posts[i].title %></h5>
+          <p class="card-text"><%= posts[i].content %></p>
+          <a href="#" class="btn btn-primary"><%= posts[i].date %> </a>
+        </div>
+      </div>
+      <% } %>
+    </section>
   </body>
 </html>
